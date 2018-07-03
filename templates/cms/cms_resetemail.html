@@ -1,0 +1,43 @@
+{% extends 'cms/cms_base.html' %}
+
+{% block title -%}
+修改邮箱
+{%- endblock %}
+
+{% block page_title -%}
+    {{self.title()}}
+{%- endblock %}
+
+{% block head %}
+    <script src="{{static('cms/js/resetmail.js') }}"></script>
+{% endblock %}
+
+{% block main_content %}
+    <!-- 1. 声明form表单 -->
+    <form action="">
+        <!-- 2. 声明form-container：调整盒子大小 -->
+        <div class="form-container">
+            <!-- 3. 声明form-group 有上下间距的表单 -->
+            <div class="form-group">
+                <!-- 4. 声明input-group 组合框 -->
+                <div class="input-group">
+                    <!-- 5. 声明输入框 -->
+                    <input type="email" class="form-control" name="email" placeholder="新邮箱">
+                    <span class="input-group-addon" id="captcha-btn" style="cursor:pointer">获取验证码</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" name="captcha" placeholder="邮箱验证码">
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-primary" id="submit">立即修改</button>
+            </div>
+
+        </div>
+    </form>
+{% endblock %}
+
+
+

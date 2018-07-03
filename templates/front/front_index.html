@@ -1,0 +1,64 @@
+{% extends 'front/front_base.html' %}
+{% block title %}
+    武汉柠檬python论坛
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ static("front/css/front_index.css") }}">
+{% endblock %}
+
+{% block body %}
+    {#    large-content#}
+    <div class="lg-content">
+
+        {# 调整轮播图的高度1：可以调整这个div的高度 #}
+        <div id="carousel-example-generic" class="carousel slide index-banner" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <a href="#">
+                        {# 轮播图也可以调整img标签的高度 #}
+                        <img src="https://static-image.xfz.cn/1529553938_445.png" alt="...">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <img src="https://static-image.xfz.cn/1529980408_582.jpg" alt="...">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <img src="https://static-image.xfz.cn/1529561063_668.jpg" alt="...">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <img src="https://static-image.xfz.cn/1529560399_230.jpg" alt="...">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="sm-content"></div>
+{% endblock %}

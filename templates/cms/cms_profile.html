@@ -1,0 +1,55 @@
+{% extends 'cms/cms_base.html' %}
+{% block title %}
+    个人信息
+{% endblock %}
+
+{% block page_title %}
+    <!-- 从title block中引用title的内容 -->
+    {{self.title()}}
+{% endblock %}
+
+{% block main_content %}
+    <!-- ⚠️ 定义一个变量，在set代码下面的所有代码都可以用这个变量 -->
+    {% set user = g.cms_user%}
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <td>用户名:</td>
+                <td>{{user.username}}</td>
+            </tr>
+            <tr>
+                <td>邮箱:</td>
+                <td>{{user.email}}</td>
+            </tr>
+            <tr>
+                <td>角色:</td>
+                <td>{% for role in user.roles %}
+                    {{ role.name }}
+                    <!-- 如果不是最后一个，就一个逗号 -->
+                    {% if not loop.last %}
+                            ,
+                    {% endif %}
+                {% endfor %}
+                </td>
+            </tr>
+            <tr>
+                <td>权限:</td>
+                <td>{% for role in user.roles %}
+                        {{ role.desc }}
+                        <!-- 如果不是最后一个，就一个逗号 -->
+                        {% if not loop.last %}
+                                /
+                        {% endif %}
+                        
+                {% endfor %}
+                </td>
+            </tr>
+            <tr>
+                <td>加入时间:</td>
+                <td>{{user.join_time}}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
+
+

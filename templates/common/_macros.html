@@ -1,0 +1,8 @@
+<!-- 定义文件宏 -->
+{% macro static(filename) -%}
+    {{ url_for("static",filename=filename) }}
+{%- endmacro %}
+
+{% macro gm(filename) -%}
+    {{ url_for("static",filename='gentelella-master/'+filename) }}
+{%- endmacro %}

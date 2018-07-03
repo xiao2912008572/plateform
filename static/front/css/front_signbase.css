@@ -1,0 +1,45 @@
+body {
+    background: #f3f3f3;
+}
+
+.outer-box {
+    width: 854px;
+    background: #fff;
+    margin: 0 auto;
+    /*{#清除浮动#} */
+    overflow: hidden;
+}
+
+.logo-box {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.logo-box img {
+    width: 60px;
+    height: 60px;
+}
+
+.page-title {
+    text-align: center;
+}
+
+.sign-box {
+    width: 300px;
+    /*{#居中#} */
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.captcah-addon {
+    padding: 0;
+    /*{# 隐藏溢出部分 #} */
+    overflow: hidden;
+}
+
+/*{# 图片指定宽和高 #}*/
+.captcha-img {
+    width: 94px;
+    height: 32px;
+    cursor: pointer;
+}

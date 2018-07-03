@@ -1,0 +1,18 @@
+/*板块中心 - 板心*/
+.main-container {
+    width: 990px;
+    margin: 0 auto; /* 居中 */
+    overflow: hidden; /* 清除浮动塌陷 */
+}
+
+/* 大的版心 */
+.lg-content {
+    width: 730px;
+    float: left;
+}
+
+/* 小的版心 */
+.sm-content {
+    width: 250px;
+    float: right;
+}

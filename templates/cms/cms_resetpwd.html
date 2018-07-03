@@ -1,0 +1,49 @@
+{% extends 'cms/cms_base.html' %}
+{% from 'common/_macros.html' import static%}
+{% block title -%}
+修改密码
+{%- endblock %}
+
+{% block page_title -%}
+    {{self.title()}}
+{%- endblock %}
+
+{% block head %}
+    <script src="{{static('cms/js/resetpwd.js') }}"></script>
+{% endblock %}
+
+
+{% block main_content %}
+    <!-- action="" 为空代表当前url -->
+    <div class="form-container">
+            <form action="" method="POST">
+                    <!-- 1. form-group 可以让表单上下有间距 -->
+                    <div class="form-group">
+                        <!-- 2. 表单统一放在 input-group中 -->
+                        <div class="input-group">
+                            <!-- 3. 左边部分用 input-group-addon  -->
+                            <span class="input-group-addon">旧密码</span>
+                            <!-- 4. 右边部分用 form-control -->
+                            <input type="password" class="form-control" name="oldpwd" placeholder="请输入旧密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">新密码</span>
+                            <input type="password" class="form-control" name="newpwd" placeholder="请输入新密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">确认新密码</span>
+                            <input type="password" class="form-control" name="newpwd2" placeholder="请输入确认密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" id="submit">立即保存</button>
+                    </div>
+                </form>
+    </div>
+{% endblock %}
+
+
