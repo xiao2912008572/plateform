@@ -132,27 +132,27 @@
                             </li>
 
                             {% if cms_user.has_permission(CMSPermission.POSTER) %}
-                                <li><a href="#"><i class="fa fa-file-code-o"></i> 状态码 <span class="fa fa-chevron-down"></span></a>
+                                <li><a href="#"><i class="fa fa-file-code-o"></i> 状态码 <span class="fa"></span></a>
                                 </li>
                             {% endif %}
 
                             {% if cms_user.has_permission(CMSPermission.COMMENTER) %}
-                                <li><a href="#"><i class="fa fa-file-o"></i> 项目文档 <span class="fa fa-chevron-down"></span></a>
+                                <li><a href="#"><i class="fa fa-file-o"></i> 项目文档 <span class="fa"></span></a>
                                 </li>
                             {% endif %}
 
                             {% if cms_user.has_permission(CMSPermission.BOARDER) %}
-                                <li><a href="#"><i class="fa fa-globe"></i> 环境管理 <span class="fa fa-chevron-down"></span></a>
+                                <li><a href="#"><i class="fa fa-globe"></i> 环境管理 <span class="fa"></span></a>
                                 </li>
                             {% endif %}
 
                             {% if cms_user.has_permission(CMSPermission.FRONTUSER) %}
-                                <li><a href="#"><i class="fa fa-user"></i> 协作管理 <span class="fa fa-chevron-down"></span></a>
+                                <li><a href="#"><i class="fa fa-user"></i> 协作管理 <span class="fa"></span></a>
                                 </li>
                             {% endif %}
 
                             {% if cms_user.has_permission(CMSPermission.FRONTUSER) %}
-                                <li><a href="#"><i class="fa fa-hacker-news"></i> 项目动态 <span class="fa fa-chevron-down"></span></a>
+                                <li><a href="#"><i class="fa fa-hacker-news"></i> 项目动态 <span class="fa"></span></a>
                                 </li>
                             {% endif %}
 
@@ -163,12 +163,12 @@
                         <ul class="nav side-menu" style="height:100%">
 
                             {% if cms_user.has_permission(CMSPermission.CMSUSER) %}
-                                <li><a href="#"><i class="fa fa-file-word-o"></i> 日志管理 <span class="fa fa-chevron-down"></span></a>
+                                <li><a href="#"><i class="fa fa-file-word-o"></i> 日志管理 <span class="fa"></span></a>
                                 </li>
                             {% endif %}
 
                             {% if cms_user.is_developer %}
-                                <li><a href="#"><i class="fa fa-circle-o-notch"></i> 持续集成 <span class="fa fa-chevron-down"></span></a>
+                                <li><a href="#"><i class="fa fa-circle-o-notch"></i> 持续集成 <span class="fa"></span></a>
                                 </li>
                             {% endif %}
 
