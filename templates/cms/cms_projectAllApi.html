@@ -1,0 +1,65 @@
+{% extends 'cms/cms_base.html' %}
+
+{% block title %}
+    接口测试平台
+{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block page_title %}
+    所有接口
+{% endblock %}
+
+{% block main_content_2 %}
+    {# 模态对话框 #}
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="top-box">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#project-dialog">
+                + 新建分组
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#project-dialog">
+                + 添加接口
+            </button>
+        </div>
+
+        {# 清除浮动 #}
+        <div class="clearfix"></div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <td>接口名称</td>
+                    <td>接口URI</td>
+                    <td>操作</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block main_content_3 %}
+{% endblock %}
+{% block main_content_4 %}
+{% endblock %}

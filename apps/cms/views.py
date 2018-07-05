@@ -18,7 +18,12 @@ from .forms import (
 from .models import (
     CMSUser,
     CMSPersmission,
-    EoProject
+    EoProject,
+    EoApiEnv,
+    EoApiEnvFrontUri,
+    EoApiEnvHeader,
+    EoApiEnvParam,
+    EoApiEnvAdditionalParam
 )
 from ..models import BannerModel
 from .decorators import login_required, permission_required
@@ -112,23 +117,11 @@ def dproject():
 @bp.route('/project_index')
 @login_required
 def project_index():
-    # # ⚠️ referrer引用：可以知道上一个页面，本页面来源
-    # return_to = request.referrer
-    #
-    # # return_to 存在，并且不等于当前页面的url 并且
-    # if return_to and return_to != request.url and safeutils.is_safe_url(return_to):
-    #     return render_template('cms/cms_parent_base.html', return_to=return_to)
-    # else:
-        return render_template('cms/cms_project.html')
-
-    # projectID = request.args.get('projectID')
-
-
-# # 🌟 cms后台管理项目返回列表功能
-# @bp.route('/project_back')
-# def project_back():
-#     # ⚠️ referrer引用：可以知道上一个页面，本页面来源
-#     return_to = request.referrer
+    # 将projectID存到session中
+    print(request.args.get('projectID'))
+    print(type(request.args.get('projectID')))
+    session[config.CMS_PROJECT_ID] = request.args.get('projectID')
+    return render_template('cms/cms_project.html')
 
 
 # 🌟 cms后台管理系统的注销
@@ -214,19 +207,112 @@ def email_captcha():
 
 
 # 🌟 帖子管理
-@bp.route('/posts/')
+# @bp.route('/posts/')
+# @login_required
+# @permission_required(CMSPersmission.POSTER)
+# def posts():
+#     return render_template('cms/cms_posts.html')  #
+
+
+# 🌟 项目概况
+@bp.route('/projectOverview/')
 @login_required
 @permission_required(CMSPersmission.POSTER)
-def posts():
-    return render_template('cms/cms_posts.html')
+def projectOverview():
+    return render_template('cms/cms_projectOverview.html')
 
 
-# 🌟 评论管理
-@bp.route('/comments')
+# # 🌟 评论管理
+# @bp.route('/comments')
+# @login_required
+# @permission_required(CMSPersmission.COMMENTER)
+# def comments():
+#     return render_template('cms/cms_comments.html')
+
+# 🌟 API接口-快速测试
+@bp.route('/projectApiQuickTest')
 @login_required
 @permission_required(CMSPersmission.COMMENTER)
-def comments():
-    return render_template('cms/cms_comments.html')
+def projectApiQuickTest():
+    return render_template('cms/cms_projectApiQuickTest.html')
+
+
+# 🌟 API接口-所有接口
+@bp.route('/projectAllApi')
+@login_required
+@permission_required(CMSPersmission.COMMENTER)
+def projectApiAll():
+    return render_template('cms/cms_projectAllApi.html')
+
+
+# TODO:正在做的
+# 🌟 API接口-环境管理
+@bp.route('/projectEnv/')
+@login_required
+@permission_required(CMSPersmission.COMMENTER)
+def projectEnv():
+    # 1. 拿到项目ID
+    projectID = g.cms_project_id  # str类型
+
+    # 2. 拿到环境ID
+    envID = request.args.get('envID')
+
+    # 3. 查询各参数
+    envs = EoApiEnv.query.filter_by(projectID=int(projectID)).all()
+    env = EoApiEnv.query.filter_by(envID=envID).first()
+    env_uri = EoApiEnvFrontUri.query.filter_by(envID=envID).first()
+    env_headers = EoApiEnvHeader.query.filter_by(envID=envID).all()
+    env_addtionalparams = EoApiEnvAdditionalParam.query.filter_by(envID=envID).all()
+    env_params = EoApiEnvParam.query.filter_by(envID=envID).all()
+
+    return render_template(
+        'cms/cms_projectEnv1.html',
+        envs=envs,
+        env=env,
+        env_uri=env_uri,
+        env_headers=env_headers,
+        env_addtionalparams=env_addtionalparams,
+        env_params=env_params
+    )
+
+
+# 🌟 API接口-新增环境
+@bp.route('/aprojectEnv/')
+@login_required
+@permission_required(CMSPersmission.COMMENTER)
+def aprojectEnv():
+    # 1. 声明对象
+    env = EoApiEnv(envName='测试环境', envDesc='application/x-www-form-urlencoded')
+    project = EoProject(projectType=1, projectName='测试项目111', projectVersion='1.1')
+    uri = EoApiEnvFrontUri(uri='giant.dev.yunlu6.com')
+    header1 = EoApiEnvHeader(headerName='Accept-Encoding1', headerValue='gzip')
+    header2 = EoApiEnvHeader(headerName='Accept-Encoding2', headerValue='gzip')
+    header3 = EoApiEnvHeader(headerName='Accept-Encoding3', headerValue='gzip')
+
+    param = EoApiEnvParam(paramKey='token', paramValue='asdfjkj123kjdfjskdsadf')
+    additionalparam = EoApiEnvAdditionalParam(paramKey='addtional_token', paramValue='13849sdf87a8d09fqherjhadf')
+
+    # 2. 分别添加
+    # 正向添加：一对多关系
+    project.apienv.append(env)
+
+    # 正向添加：一对一关系
+    env.uri = uri
+
+    # 正向添加：一对多关系
+    env.header.append(header1)
+    env.header.append(header2)
+    env.header.append(header3)
+    env.param.append(param)
+    env.additionalparam.append(additionalparam)
+
+    # 3.提交插入
+    db.session.add(project)
+    db.session.add(env)
+
+    # 4.提交执行
+    db.session.commit()
+    return restful.success()
 
 
 # 🌟 板块管理

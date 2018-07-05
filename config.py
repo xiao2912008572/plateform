@@ -31,6 +31,9 @@ SQLALCHEMY_TRACK_MODIFICATIONS = False
 # 定义一个常量:用来存cms模块的用户id
 CMS_USER_ID = 'ASDFSDFASD'
 
+# 定义一个常量:用来存cms模块的项目id
+CMS_PROJECT_ID = '0'
+
 # 定义一个常量：用来存front模块得意哦那个户id
 FRONT_USER_ID = 'ASDGHSJKGDAHKJSGHDK'
 

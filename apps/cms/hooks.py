@@ -19,6 +19,10 @@ def before_request():
             # 通过flask.g对象，拿到user，然后这个g.cms_user可以在`模板`和`视图`中直接使用
             g.cms_user = user
 
+    if config.CMS_PROJECT_ID in session:
+        project_id = session.get(config.CMS_PROJECT_ID)
+        g.cms_project_id = project_id
+
 
 # ⚠️  上下文钩子：这个钩子函数的目的是，只要是bp蓝图返回的模板，都会将这个添加到上下文(也就是这个变量)当中，那么所有的模板都可以使用这个变量
 @bp.context_processor
