@@ -1,0 +1,258 @@
+{% extends 'cms/cms_base_iframe.html' %}
+{% from "common/_macros.html" import static %}
+{% from "common/_macros.html" import gm %}
+
+
+<script>
+    $(function () {
+        $('p.p').click(function (event) {
+            event.preventDefault();
+            {#console.log($(event));#}
+            var envID = event.target.dataset['envid'];
+
+            zlajax.get({
+                'url': '/cms/projectEnv_iframe/',
+                'data': {
+                    'envID': envID
+                },
+                'success': function (data) {
+                    console.log(data);
+                    $('#env_name1').val(data['envName']);
+                    $('#env_desc1').val(data['envDesc']);
+                    $('#env_uri1').val(data['envUri']);
+                }
+            });
+
+        })
+    })
+</script>
+
+<div>
+    {# TODO iframe top start:顶部栏替换 #}
+    <div class="right_col" role="main">
+
+        <!-- top tiles :顶部栏 -->
+        <div class="row tile_count">
+            <h1>
+                {% block page_title %}
+                    <p style="margin-left: 30px">环境管理</p>
+                {% endblock %}
+            </h1>
+        </div>
+        <!-- /top tiles -->
+        {# TODO iframe top end:顶部栏替换 #}
+
+        {#            第二行#}
+        <div class="row">
+            {# TODO div 从这里开始 #}
+            <div class="main_content" id="main_content_2">
+                {% block main_content_2 %}
+                    {#  模态对话框  #}
+                    <div class="main_content" style="padding-bottom: 20px">
+                        {#    顶部盒子#}
+                        <div class="top-box" style="padding-left: 20px">
+                            <!-- Button trigger modal ：模态对话框-->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#project-dialog">
+                                + 创建环境
+                            </button>
+                        </div>
+
+                        <!-- Modal：模态对话框主体 -->
+                        <div class="modal fade" id="project-dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document" style="width: 660px">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">创建环境</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        {#复用下方的form表单#}
+                                        <form>
+                                            <div class="form-group" style="width: 200px;" id="test_name">
+                                                <label for="env_name">环境名称</label>
+                                                <input type="text" class="form-control" id="env_name" placeholder="">
+                                            </div>
+
+                                            <div class="form-group" style="width: 200px;">
+                                                <label for="env_desc">环境说明</label>
+                                                <input type="text" class="form-control" id="env_desc" placeholder="">
+                                            </div>
+
+                                            <hr>
+
+                                            <div class="form-group" style="width: 200px;">
+                                                <label for="env_uri">前置URI</label>
+                                                <input type="text" class="form-control" id="env_uri" placeholder="">
+                                            </div>
+
+                                            <div class="form-group" style="width: 200px;">
+                                                <label for="env_uri">鉴权信息</label>
+                                                <select id='env_uri' class="form-control">
+                                                    <option>无</option>
+                                                    <option>有</option>
+                                                </select>
+                                            </div>
+
+                                            <label for="env_header">请求Header头部</label>
+                                            <div class="form-inline form-group" id="header_from">
+                                                <input type="text" class="form-control" id="env_header_key" placeholder="header-key"
+                                                       style="width: 200px">
+                                                <input type="text" class="form-control" id="env_header_value" placeholder="header-value"
+                                                       style="width: 200px;margin-left: 10px">
+                                                <p></p>
+                                            </div>
+
+                                            <label for="env_header">额外参数</label>
+                                            <div class="form-inline form-group" id="header_from">
+                                                <input type="text" class="form-control" id="env_additionnalparam_key" placeholder="additionalparam-key"
+                                                       style="width: 200px">
+                                                <input type="text" class="form-control" id="env_additionnalparam_value" placeholder="additionalparam-value"
+                                                       style="width: 200px;margin-left: 10px">
+                                                <input type="text" class="form-control" id="env_additionnalparam_desc" placeholder="additionalparam-desc"
+                                                       style="width: 200px;margin-left: 10px">
+
+                                            </div>
+
+                                            <label for="env_header">全局变量</label>
+                                            <div class="form-inline form-group" id="header_from">
+                                                <input type="text" class="form-control" id="env_param_key" placeholder="param.key"
+                                                       style="width: 200px">
+                                                <input type="text" class="form-control" id="env_param_value" placeholder="param.value"
+                                                       style="width: 200px;margin-left: 10px">
+                                                <input type="text" class="form-control" id="env_param_desc" placeholder="param.desc"
+                                                       style="width: 200px;margin-left: 10px">
+                                            </div>
+                                            <p></p>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                        <button type="button" class="btn btn-primary" id="save-project-btn">保存</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {#  内容  #}
+                    <div class="sm-content col-md-2">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>环境变量</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                {# 将数据绑定到tr标签上面，有利于做'编辑'功能的时候取值 #}
+                                <td>
+                                    {% for env in envs %}
+                                        <li style="list-style: none" data-envID="{{ env.envID }}" id="envName_li">
+                                            {#                        <a href="{{ url_for('cms.projectEnv_iframe',envID=env.envID) }}" data-envID="{{ env.envID }}" id="envName">【{{ env.envName }}】{{ env.envDesc }}</a>#}
+                                            {#                        <a href="#" data-envID="{{ env.envID }}" id="envName_a">【{{ env.envName }}】{{ env.envDesc }}</a>#}
+                                            <p class="p" data-envID="{{ env.envID }}" id="envName_a">{{ env.envName }}】{{ env.envDesc }}</p>
+                                        </li>
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    {#    大版心     #}
+                    <div class="lg-content col-md-10" style="padding-top: 8px;padding-left: 18px">
+                        <div class="form-content" style="width: 800px;">
+                            <form>
+                                <div class="form-group" style="width: 200px;">
+                                    <label for="env_name">环境名称</label>
+                                    <input type="text" class="form-control" value="{{ env.envName }}" id="env_name1" placeholder="{{ env.envName }}">
+                                </div>
+
+                                <div class="form-group" style="width: 200px;">
+                                    <label for="env_desc">环境说明</label>
+                                    <input type="text" class="form-control" value="{{ env.envDesc }}" id="env_desc1" placeholder="{{ env.envDesc }}">
+                                </div>
+
+                                <hr>
+
+                                <div class="form-group" style="width: 200px;">
+                                    <label for="env_uri">前置URI</label>
+                                    <input type="text" value="{{ env_uri.uri }}" class="form-control" id="env_uri1" placeholder="{{ env_uri.uri }}">
+                                </div>
+
+                                <div class="form-group" style="width: 200px;">
+                                    <label for="env_uri">鉴权信息</label>
+                                    <select id='env_uri' class="form-control">
+                                        <option>无</option>
+                                        <option>有</option>
+                                    </select>
+                                </div>
+
+                                <label for="env_header">请求Header头部</label>
+                                <div class="form-inline form-group" id="header_from">
+                                    {% for env_header in env_headers %}
+                                        <input type="text" class="form-control" value='{{ env_header.headerName }}' id="env_header_key" placeholder="{{ env_header.headerName }}"
+                                               style="width: 200px">
+                                        <input type="text" class="form-control" value="{{ env_header.headerValue }}" id="env_header_value"
+                                               placeholder="{{ env_header.headerValue }}"
+                                               style="width: 200px;margin-left: 10px">
+                                        <p></p>
+                                    {% endfor %}
+                                </div>
+
+                                <label for="env_header">额外参数</label>
+                                <div class="form-inline form-group" id="header_from">
+                                    {% for env_addtionalparam in env_addtionalparams %}
+                                        <input type="text" class="form-control" id="env_additionnalparam_key" value="{{ env_addtionalparam.paramKey }}"
+                                               placeholder="env.additionnalparam"
+                                               style="width: 200px">
+                                        <input type="text" class="form-control" id="env_additionnalparam_value" value="{{ env_addtionalparam.paramValue }}"
+                                               placeholder="env.env_header"
+                                               style="width: 200px;margin-left: 10px">
+                                        <input type="text" class="form-control" id="env_additionnalparam_desc" value="{{ env_addtionalparam.paramDesc }}"
+                                               placeholder="env.env_header"
+                                               style="width: 200px;margin-left: 10px">
+                                    {% endfor %}
+
+
+                                </div>
+
+                                <label for="env_header">全局变量</label>
+                                <div class="form-inline form-group" id="header_from">
+                                    {% for env_param in env_params %}
+                                        <input type="text" class="form-control" id="env_param_key" value="{{ env_param.paramKey }}" placeholder="env.additionnalparam"
+                                               style="width: 200px">
+                                        <input type="text" class="form-control" id="env_param_value" value="{{ env_param.paramValue }}" placeholder="env.env_header"
+                                               style="width: 200px;margin-left: 10px">
+                                        <input type="text" class="form-control" id="env_param_desc" value="{{ env_param.paramDesc }}" placeholder="env.env_header"
+                                               style="width: 200px;margin-left: 10px">
+                                    {% endfor %}
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+
+                        </div>
+                    </div>
+                {% endblock %}
+            </div>
+            {# TODO div 到这里 #}
+        </div>
+
+
+        {#            第三行#}
+        <div class="row">
+            <div class="main_content">
+                {% block main_content_3 %}{% endblock %}
+            </div>
+        </div>
+
+        {#            第四行#}
+        <div class="row">
+            <div class="main_content">
+                {% block main_content_4 %}{% endblock %}
+            </div>
+        </div>
+    </div>
+    <br/>
+</div>

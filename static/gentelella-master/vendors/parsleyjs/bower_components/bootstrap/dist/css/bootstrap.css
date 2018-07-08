@@ -704,7 +704,7 @@ blockquote .small:before {
 }
 
 blockquote.pull-right {
-  padding-right: 15px;
+  padding-right: 0px;
   padding-left: 0;
   border-right: 5px solid #eeeeee;
   border-left: 0;
@@ -782,7 +782,7 @@ pre code {
 }
 
 .container {
-  padding-right: 15px;
+  padding-right: 0px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
@@ -901,7 +901,7 @@ pre code {
 .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-right: 15px;
+  padding-right: 0px;
   padding-left: 15px;
 }
 
@@ -4380,7 +4380,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-collapse {
   max-height: 340px;
-  padding-right: 15px;
+  padding-right: 0px;
   padding-left: 15px;
   overflow-x: visible;
   border-top: 1px solid transparent;

@@ -1,0 +1,187 @@
+{% from "common/_macros.html" import static %}
+{% from "common/_macros.html" import gm %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {#{% include "common/_heads.html" %}#}
+
+    <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    {#<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">#}
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static',filename='common/sweetalert/sweetalert.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='common/sweetalert/zlalert.js') }}"></script>
+    <script src="{{ url_for('static',filename='common/zlajax.js') }}"></script>
+    {#<link rel="stylesheet" href="{{ url_for('static',filename='common/sweetalert/sweetalert.css') }}">#}
+
+    <!-- jQuery -->
+    {#<script src="../vendors/jquery/dist/jquery.min.js"></script>#}
+    <script src="{{ gm('vendors/jquery/dist/jquery.min.js') }}"></script>
+
+    <!-- Bootstrap -->
+    {#<script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>#}
+    <script src="{{ gm('vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+
+    <!-- FastClick -->
+    {#<script src="../vendors/fastclick/lib/fastclick.js"></script>#}
+    <script src="{{ gm('vendors/fastclick/lib/fastclick.js') }}"></script>
+
+    <!-- NProgress -->
+    {#<script src="../vendors/nprogress/nprogress.js"></script>#}
+    <script src="{{ gm('vendors/nprogress/nprogress.js') }}"></script>
+
+    <!-- Chart.js -->
+    {#<script src="../vendors/Chart.js/dist/Chart.min.js"></script>#}
+    <script src="{{ gm('vendors/Chart.js/dist/Chart.min.js') }}"></script>
+
+    <!-- gauge.js -->
+    {#<script src="../vendors/gauge.js/dist/gauge.min.js"></script>#}
+    <script src="{{ gm('vendors/gauge.js/dist/gauge.min.js') }}"></script>
+
+    <!-- bootstrap-progressbar -->
+    {#<script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>#}
+    <script src="{{ gm('vendors/bootstrap-progressbar/bootstrap-progressbar.min.js') }}"></script>
+
+    <!-- iCheck -->
+    {#<script src="../vendors/iCheck/icheck.min.js"></script>#}
+    <script src="{{ gm('vendors/iCheck/icheck.min.js') }}"></script>
+
+    <!-- Skycons -->
+    {#<script src="../vendors/skycons/skycons.js"></script>#}
+    <script src="{{ gm('vendors/skycons/skycons.js') }}"></script>
+
+    <!-- Flot -->
+    {#<script src="../vendors/Flot/jquery.flot.js"></script>#}
+    <script src="{{ gm('vendors/Flot/jquery.flot.js') }}"></script>
+
+    {#<script src="../vendors/Flot/jquery.flot.pie.js"></script>#}
+    <script src="{{ gm('vendors/Flot/jquery.flot.pie.js') }}"></script>
+
+    {#<script src="../vendors/Flot/jquery.flot.time.js"></script>#}
+    <script src="{{ gm('vendors/Flot/jquery.flot.time.js') }}"></script>
+
+    {#<script src="../vendors/Flot/jquery.flot.stack.js"></script>#}
+    <script src="{{ gm('vendors/Flot/jquery.flot.stack.js') }}"></script>
+
+    {#<script src="../vendors/Flot/jquery.flot.resize.js"></script>#}
+    <script src="{{ gm('vendors/Flot/jquery.flot.resize.js') }}"></script>
+
+
+    <!-- Flot plugins -->
+    {#<script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>#}
+    <script src="{{ gm('vendors/flot.orderbars/js/jquery.flot.orderBars.js') }}"></script>
+
+    {#<script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>#}
+    <script src="{{ gm('vendors/flot-spline/js/jquery.flot.spline.min.js') }}"></script>
+
+    {#<script src="../vendors/flot.curvedlines/curvedLines.js"></script>#}
+    <script src="{{ gm('vendors/flot.curvedlines/curvedLines.js') }}"></script>
+
+    <!-- DateJS -->
+    {#<script src="../vendors/DateJS/build/date.js"></script>#}
+    <script src="{{ gm('vendors/DateJS/build/date.js') }}"></script>
+
+    <!-- JQVMap -->
+    {#<script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>#}
+    <script src="{{ gm('vendors/jqvmap/dist/jquery.vmap.js') }}"></script>
+
+    {#<script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>#}
+    <script src="{{ gm('vendors/jqvmap/dist/maps/jquery.vmap.world.js') }}"></script>
+
+    {#<script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>#}
+    <script src="{{ gm('vendors/jqvmap/examples/js/jquery.vmap.sampledata.js') }}"></script>
+
+    <!-- bootstrap-daterangepicker -->
+    {#<script src="../vendors/moment/min/moment.min.js"></script>#}
+    <script src="{{ gm('vendors/moment/min/moment.min.js') }}"></script>
+
+    {#<script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>#}
+    <script src="{{ gm('vendors/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
+
+    <!-- Custom Theme Scripts -->
+    {#<script src="../build/js/custom.min.js"></script>#}
+    <script src="{{ gm('build/js/custom.min.js') }}"></script>
+
+
+    <link rel="stylesheet" href="{{ static('cms/css/base.css') }}">
+    <link href="{{ gm('vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+    {#<script src="{{ static('cms/js/env_header.js') }}"></script>#}
+
+    {# 增加iframe刷新的效果 下面几个#}
+    <link href="{{ gm('vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ gm('vendors/nprogress/nprogress.css') }}" rel="stylesheet">
+    <link href="{{ gm('vendors/iCheck/skins/flat/green.css') }}" rel="stylesheet">
+    <link href="{{ gm('vendors/jqvmap/dist/jqvmap.min.css') }}" rel="stylesheet">
+    <link href="{{ gm('vendors/bootstrap-daterangepicker/daterangepicker.css') }}" rel="stylesheet">
+
+    <script>
+        $(function () {
+            $('p.p').click(function (event) {
+                event.preventDefault();
+                {#console.log($(event));#}
+                var envID = event.target.dataset['envid'];
+
+                zlajax.get({
+                    'url': '/cms/projectEnv_iframe/',
+                    'data': {
+                        'envID': envID
+                    },
+                    'success': function (data) {
+                        console.log(data);
+                        $('#env_name1').val(data['envName']);
+                        $('#env_desc1').val(data['envDesc']);
+                        $('#env_uri1').val(data['envUri']);
+                    }
+                });
+
+            })
+        })
+    </script>
+
+    <style type="text/css">
+        body {
+            height: 1000px;
+            width: 800px;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+{# TODO iframe top start:顶部栏替换 #}
+<div class="right_col" role="main">
+
+    <!-- top tiles :顶部栏 -->
+    <div class="row tile_count">
+        <h1>
+            {% block page_title %}
+            {% endblock %}
+        </h1>
+    </div>
+    <!-- /top tiles -->
+    {# TODO iframe top end:顶部栏替换 #}
+
+    {#            第二行#}
+    <div class="row">
+        <div class="main_content" id="main_content_2">
+            {% block main_content_2 %}
+            {% endblock %}
+        </div>
+
+        {#            第三行#}
+        <div class="row">
+            <div class="main_content">
+                {% block main_content_3 %}{% endblock %}
+            </div>
+        </div>
+
+        {#            第四行#}
+        <div class="row">
+            <div class="main_content">
+                {% block main_content_4 %}{% endblock %}
+            </div>
+        </div>
+    </div>
+    <br/>
+</body>

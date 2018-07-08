@@ -3,8 +3,28 @@
   <component name="ChangeListManager">
     <list default="true" id="48ddcfb9-2397-44cb-a24e-4fc91f09c092" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/apps/cms/hooks.py" afterPath="$PROJECT_DIR$/apps/cms/hooks.py" />
+      <change beforePath="$PROJECT_DIR$/apps/cms/models.py" afterPath="$PROJECT_DIR$/apps/cms/models.py" />
+      <change beforePath="$PROJECT_DIR$/apps/cms/views.py" afterPath="$PROJECT_DIR$/apps/cms/views.py" />
       <change beforePath="$PROJECT_DIR$/static/cms/css/base.css" afterPath="$PROJECT_DIR$/static/cms/css/base.css" />
-      <change beforePath="$PROJECT_DIR$/templates/cms/cms_projectEnv1.html" afterPath="$PROJECT_DIR$/templates/cms/cms_projectEnv1.html" />
+      <change beforePath="$PROJECT_DIR$/static/cms/js/base.js" afterPath="$PROJECT_DIR$/static/cms/js/base.js" />
+      <change beforePath="$PROJECT_DIR$/static/cms/js/env_header.js" afterPath="$PROJECT_DIR$/static/cms/js/env_header.js" />
+      <change beforePath="$PROJECT_DIR$/static/gentelella-master/docs/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/static/gentelella-master/docs/css/bootstrap.min.css" />
+      <change beforePath="$PROJECT_DIR$/static/gentelella-master/vendors/bootstrap/dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/static/gentelella-master/vendors/bootstrap/dist/css/bootstrap.css" />
+      <change beforePath="$PROJECT_DIR$/static/gentelella-master/vendors/bootstrap/dist/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/static/gentelella-master/vendors/bootstrap/dist/css/bootstrap.css.map" />
+      <change beforePath="$PROJECT_DIR$/static/gentelella-master/vendors/bootstrap/dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/static/gentelella-master/vendors/bootstrap/dist/css/bootstrap.min.css" />
+      <change beforePath="$PROJECT_DIR$/static/gentelella-master/vendors/bootstrap/dist/css/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/static/gentelella-master/vendors/bootstrap/dist/css/bootstrap.min.css.map" />
+      <change beforePath="$PROJECT_DIR$/static/gentelella-master/vendors/bootstrap/less/type.less" afterPath="$PROJECT_DIR$/static/gentelella-master/vendors/bootstrap/less/type.less" />
+      <change beforePath="$PROJECT_DIR$/static/gentelella-master/vendors/gauge.js/assets/bootstrap.min.css" afterPath="$PROJECT_DIR$/static/gentelella-master/vendors/gauge.js/assets/bootstrap.min.css" />
+      <change beforePath="$PROJECT_DIR$/static/gentelella-master/vendors/parsleyjs/bower_components/bootstrap/dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/static/gentelella-master/vendors/parsleyjs/bower_components/bootstrap/dist/css/bootstrap.css" />
+      <change beforePath="$PROJECT_DIR$/static/gentelella-master/vendors/parsleyjs/bower_components/bootstrap/dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/static/gentelella-master/vendors/parsleyjs/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+      <change beforePath="$PROJECT_DIR$/static/gentelella-master/vendors/parsleyjs/bower_components/bootstrap/less/type.less" afterPath="$PROJECT_DIR$/static/gentelella-master/vendors/parsleyjs/bower_components/bootstrap/less/type.less" />
+      <change beforePath="$PROJECT_DIR$/static/gentelella-master/vendors/select2/docs/_sass/vendor/bootstrap/_type.scss" afterPath="$PROJECT_DIR$/static/gentelella-master/vendors/select2/docs/_sass/vendor/bootstrap/_type.scss" />
+      <change beforePath="$PROJECT_DIR$/static/gentelella-master/vendors/validator/fv.css" afterPath="$PROJECT_DIR$/static/gentelella-master/vendors/validator/fv.css" />
+      <change beforePath="$PROJECT_DIR$/templates/cms/cms_base.html" afterPath="$PROJECT_DIR$/templates/cms/cms_base.html" />
+      <change beforePath="$PROJECT_DIR$/templates/cms/cms_parent_base.html" afterPath="$PROJECT_DIR$/templates/cms/cms_parent_base.html" />
+      <change beforePath="$PROJECT_DIR$/templates/cms/cms_projectEnv.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/templates/cms/cms_projectEnv1.html" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,8 +34,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/auto_platform$auto_platform.coverage" NAME="auto_platform Coverage Results" MODIFIED="1530692378857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/auto_platform$zlbbs__1_.coverage" NAME="zlbbs Coverage Results" MODIFIED="1530779808978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/auto_platform$zlbbs__1_.coverage" NAME="zlbbs Coverage Results" MODIFIED="1530785894984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/auto_platform$auto_platform.coverage" NAME="auto_platform Coverage Results" MODIFIED="1530968583612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/auto_platform$test.coverage" NAME="test Coverage Results" MODIFIED="1530697719976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/zlbbs$views.coverage" NAME="views Coverage Results" MODIFIED="1528977251196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/cms" />
     <SUITE FILE_PATH="coverage/zlbbs$zlbbs.coverage" NAME="zlbbs Coverage Results" MODIFIED="1530449053479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -42,129 +62,38 @@
     <favorites_list name="zlbbs" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6144492">
+    <splitter split-orientation="horizontal" split-proportion="0.47252747">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="cms_parent_base.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/cms/cms_parent_base.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="606">
-                  <caret line="251" column="25" lean-forward="false" selection-start-line="251" selection-start-column="25" selection-end-line="251" selection-end-column="25" />
-                  <folding>
-                    <element signature="n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="cms_projectEnv1.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/templates/cms/cms_projectEnv1.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="30" column="43" lean-forward="true" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
-                  <folding>
-                    <element signature="e#844#864#0#HTML" expanded="true" />
-                    <element signature="e#1377#1398#0#HTML" expanded="true" />
-                    <element signature="e#1657#1678#0#HTML" expanded="true" />
-                    <element signature="e#1971#1992#0#HTML" expanded="true" />
-                    <element signature="e#2250#2271#0#HTML" expanded="true" />
-                    <element signature="e#2911#2931#0#HTML" expanded="true" />
-                    <element signature="e#3093#3131#0#HTML" expanded="true" />
-                    <element signature="e#3531#3551#0#HTML" expanded="true" />
-                    <element signature="e#3732#3770#0#HTML" expanded="true" />
-                    <element signature="e#3949#3987#0#HTML" expanded="true" />
-                    <element signature="e#4327#4347#0#HTML" expanded="true" />
-                    <element signature="e#4507#4545#0#HTML" expanded="true" />
-                    <element signature="e#4703#4741#0#HTML" expanded="true" />
-                    <element signature="e#5603#5627#0#HTML" expanded="true" />
-                    <element signature="e#6025#6068#0#HTML" expanded="true" />
-                    <element signature="e#6104#6125#0#HTML" expanded="true" />
-                    <element signature="e#6186#6207#0#HTML" expanded="true" />
-                    <element signature="e#6461#6482#0#HTML" expanded="true" />
-                    <element signature="e#6758#6779#0#HTML" expanded="true" />
-                    <element signature="e#7032#7053#0#HTML" expanded="true" />
-                    <element signature="e#7690#7710#0#HTML" expanded="true" />
-                    <element signature="e#7909#7947#0#HTML" expanded="true" />
-                    <element signature="e#8435#8455#0#HTML" expanded="true" />
-                    <element signature="e#8657#8695#0#HTML" expanded="true" />
-                    <element signature="e#8895#8933#0#HTML" expanded="true" />
-                    <element signature="e#9322#9342#0#HTML" expanded="true" />
-                    <element signature="e#9524#9562#0#HTML" expanded="true" />
-                    <element signature="e#9742#9780#0#HTML" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="648">
-                  <caret line="291" column="51" lean-forward="false" selection-start-line="291" selection-start-column="51" selection-end-line="291" selection-end-column="51" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="hooks.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/apps/cms/hooks.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+                <state relative-caret-position="99">
+                  <caret line="261" column="16" lean-forward="true" selection-start-line="261" selection-start-column="16" selection-end-line="261" selection-end-column="16" />
                   <folding>
-                    <element signature="e#0#21#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/config.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="env_header.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/static/cms/js/env_header.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="28">
-                  <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-                  <folding>
-                    <marker date="1530773415938" expanded="true" signature="451:463" ph="..." />
-                    <marker date="1530773415938" expanded="true" signature="602:632" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="base.css" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/static/cms/css/base.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="392">
-                  <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/apps/cms/models.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="444">
-                  <caret line="208" column="10" lean-forward="false" selection-start-line="208" selection-start-column="10" selection-end-line="208" selection-end-column="10" />
-                  <folding>
-                    <element signature="e#0#19#0" expanded="true" />
-                    <element signature="e#169#540#0" expanded="false" />
-                    <element signature="e#911#1433#0" expanded="false" />
-                    <element signature="e#1478#3724#0" expanded="false" />
+                    <element signature="e#938#1138#0" expanded="false" />
+                    <element signature="e#1234#1763#0" expanded="false" />
+                    <element signature="e#1859#2574#0" expanded="false" />
+                    <element signature="e#2670#3082#0" expanded="false" />
+                    <element signature="e#3172#3400#0" expanded="false" />
+                    <element signature="e#3477#3638#0" expanded="false" />
+                    <element signature="e#3719#3765#0" expanded="false" />
+                    <element signature="e#3863#5306#0" expanded="false" />
+                    <element signature="e#5803#5857#0" expanded="false" />
+                    <element signature="e#6181#6239#0" expanded="false" />
+                    <element signature="e#6374#6426#0" expanded="false" />
+                    <element signature="e#8476#9559#0" expanded="false" />
+                    <element signature="e#9672#9717#0" expanded="false" />
+                    <element signature="e#9834#9879#0" expanded="false" />
+                    <element signature="e#9994#10039#0" expanded="false" />
+                    <element signature="e#10162#10207#0" expanded="false" />
+                    <element signature="e#10282#10466#0" expanded="false" />
+                    <element signature="e#10559#11037#0" expanded="false" />
+                    <element signature="e#11134#11861#0" expanded="false" />
+                    <element signature="e#11954#12366#0" expanded="false" />
+                    <element signature="e#12423#13773#0" expanded="false" />
+                    <element signature="e#13831#15163#0" expanded="false" />
+                    <element signature="e#15223#15655#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -173,8 +102,57 @@
           <file leaf-file-name="cms_base.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/cms/cms_base.html">
               <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="284">
+                  <caret line="211" column="43" lean-forward="false" selection-start-line="211" selection-start-column="43" selection-end-line="211" selection-end-column="43" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="env_header.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/static/cms/js/env_header.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="446">
+                  <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+                  <folding>
+                    <marker date="1530958840185" expanded="true" signature="434:446" ph="..." />
+                    <marker date="1530958840185" expanded="true" signature="585:615" ph="..." />
+                    <marker date="1530958840185" expanded="true" signature="1149:1161" ph="..." />
+                    <marker date="1530958840185" expanded="true" signature="1377:1407" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="cms_projectEnv_iframe.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/cms/cms_projectEnv_iframe.html">
+              <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="249">
-                  <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+                  <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="cms_base_iframe.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/cms/cms_base_iframe.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="185">
+                  <caret line="122" column="33" lean-forward="false" selection-start-line="122" selection-start-column="28" selection-end-line="122" selection-end-column="33" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="zlajax.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/static/common/zlajax.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="168">
+                  <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
                   <folding />
                 </state>
               </provider>
@@ -187,50 +165,52 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>EoPro</find>
+      <find>that.$body.removeClass('modal-open')</find>
+      <find>Modal.prototype.adjustBody_beforeShow</find>
+      <find>env_header_key</find>
+      <find>CMSPermission</find>
+      <find>restful</find>
       <find>projectEnv</find>
-      <find>head</find>
-      <find>css</find>
-      <find>第二行</find>
-      <find>form-control</find>
-      <find>body</find>
+      <find>jsonify</find>
+      <find>return {</find>
+      <find>def __</find>
       <find>env</find>
-      <find>env_param</find>
+      <find>'success</find>
       <find>环境名称</find>
-      <find>envID</find>
-      <find>uri</find>
-      <find>query</find>
-      <find>EoApiEnv.que</find>
-      <find>header</find>
-      <find>top</find>
-      <find>before_request</find>
-      <find>CMS_USER_ID</find>
-      <find>CMS_USERID</find>
-      <find>project</find>
-      <find>project_index</find>
-      <find>g.</find>
-      <find>CMS_Pr</find>
-      <find>CMS_P</find>
-      <find>环境</find>
-      <find>env.envName</find>
-      <find>+</find>
+      <find>env_heade</find>
+      <find>main_content_2</find>
+      <find>content_</find>
+      <find>ifram</find>
+      <find>projectEnv/</find>
+      <find>transition.js</find>
+      <find>top-box</find>
+      <find>cctv</find>
+      <find>body1</find>
       <find>环境管理</find>
-      <find>模态对话框</find>
-      <find>class=&quot;right_col&quot;</find>
+      <find>js</find>
+      <find>环境变量</find>
+      <find>jquery</find>
+      <find>env_name1</find>
+      <find>project_index</find>
+      <find>iframe</find>
+      <find>user-profile dropdown-toggle</find>
+      <find>envName</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>项目</replace>
       <replace>project</replace>
+      <replace>padding-right:0px</replace>
+      <replace>padding-right: 0px</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -239,16 +219,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/front/front_signbase.html" />
-        <option value="$PROJECT_DIR$/templates/front/front_signup.html" />
-        <option value="$PROJECT_DIR$/apps/front/forms.py" />
-        <option value="$PROJECT_DIR$/apps/front/views.py" />
-        <option value="$PROJECT_DIR$/templates/front/front_signin.html" />
-        <option value="$PROJECT_DIR$/templates/common/_heads.html" />
         <option value="$PROJECT_DIR$/static/front/css/front_base.css" />
         <option value="$PROJECT_DIR$/templates/front/front_base.html" />
         <option value="$PROJECT_DIR$/templates/cms/cms_base1.html" />
-        <option value="$PROJECT_DIR$/static/cms/js/base.js" />
         <option value="$PROJECT_DIR$/apps/models.py" />
         <option value="$PROJECT_DIR$/static/front/js/front_signup.js" />
         <option value="$PROJECT_DIR$/static/front/js/front_signin.js" />
@@ -277,19 +250,26 @@
         <option value="$PROJECT_DIR$/static/cms/css/env.css" />
         <option value="$PROJECT_DIR$/static/cms/js/env.js" />
         <option value="$PROJECT_DIR$/static/cms/js/resetmail.js" />
-        <option value="$PROJECT_DIR$/static/cms/js/env_header.js" />
-        <option value="$PROJECT_DIR$/apps/cms/models.py" />
-        <option value="$PROJECT_DIR$/templates/cms/cms_parent_base.html" />
-        <option value="$PROJECT_DIR$/templates/cms/cms_parent_base.html" />
-        <option value="$PROJECT_DIR$/apps/cms/hooks.py" />
         <option value="$PROJECT_DIR$/config.py" />
-        <option value="$PROJECT_DIR$/apps/cms/views.py" />
-        <option value="$PROJECT_DIR$/apps/cms/views.py" />
-        <option value="$PROJECT_DIR$/templates/cms/cms_base.html" />
-        <option value="$PROJECT_DIR$/templates/cms/cms_base.html" />
+        <option value="$PROJECT_DIR$/templates/cms/cms_parent_base.html" />
+        <option value="$PROJECT_DIR$/templates/cms/cms_parent_base.html" />
+        <option value="$PROJECT_DIR$/static/gentelella-master/vendors/validator/fv.css" />
+        <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/apps/cms/hooks.py" />
+        <option value="$PROJECT_DIR$/apps/cms/models.py" />
+        <option value="$PROJECT_DIR$/templates/cms/env_iframe.html" />
+        <option value="$PROJECT_DIR$/static/cms/css/base.css" />
         <option value="$PROJECT_DIR$/templates/cms/cms_projectEnv1.html" />
+        <option value="$PROJECT_DIR$/static/cms/js/base.js" />
         <option value="$PROJECT_DIR$/static/cms/css/base.css" />
-        <option value="$PROJECT_DIR$/static/cms/css/base.css" />
+        <option value="$PROJECT_DIR$/templates/cms/cms_base.html" />
+        <option value="$PROJECT_DIR$/templates/cms/cms_base.html" />
+        <option value="$PROJECT_DIR$/templates/cms/cms_projectEnv1_iframe.html" />
+        <option value="$PROJECT_DIR$/apps/cms/views.py" />
+        <option value="$PROJECT_DIR$/apps/cms/views.py" />
+        <option value="$PROJECT_DIR$/templates/cms/cms_projectEnv_iframe.html" />
+        <option value="$PROJECT_DIR$/templates/cms/cms_base_iframe.html" />
+        <option value="$PROJECT_DIR$/static/cms/js/env_header.js" />
       </list>
     </option>
   </component>
@@ -299,9 +279,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="x" value="-37" />
+    <option name="y" value="60" />
+    <option name="width" value="1470" />
+    <option name="height" value="812" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -331,17 +313,6 @@
             <path>
               <item name="auto_platform" type="b2602c69:ProjectViewProjectNode" />
               <item name="auto_platform" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="auto_platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="auto_platform" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="cms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="auto_platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="auto_platform" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -355,7 +326,13 @@
               <item name="auto_platform" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="cms" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auto_platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auto_platform" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="auto_platform" type="b2602c69:ProjectViewProjectNode" />
@@ -387,7 +364,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Linters.JSHint" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Linters" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -397,6 +374,12 @@
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.standard" value="" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -419,7 +402,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.zlbbs">
+  <component name="RunManager" selected="Python.auto_platform">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -700,9 +683,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25513905" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32648125" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24304716" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16178522" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28899637" sideWeight="0.49713877" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15808298" sideWeight="0.49550706" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13590844" sideWeight="0.49550706" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1595136" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26602176" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -714,33 +697,10 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32904148" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286991" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23337364" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32648125" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1680774" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12374821" sideWeight="0.49550706" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1595136" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26602176" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988167" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1171459" sideWeight="0.50449294" order="2" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -781,70 +741,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/werkzeug/wrappers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="519" column="0" lean-forward="true" selection-start-line="519" selection-start-column="0" selection-end-line="519" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/common/sweetalert/zlalert.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1764">
-          <caret line="63" column="4" lean-forward="false" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/front/front_base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/front/css/front_index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/front/css/front_base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="2" column="17" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/common/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/front/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/gentelella-master/production/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/gentelella-master/production/inbox.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="195" column="57" lean-forward="false" selection-start-line="195" selection-start-column="55" selection-end-line="195" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/cms/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -864,7 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -876,20 +771,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/common/_heads.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/front/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="719">
           <caret line="33" column="11" lean-forward="true" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#105#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -905,7 +790,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
           <caret line="111" column="12" lean-forward="false" selection-start-line="111" selection-start-column="12" selection-end-line="111" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -929,7 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
           <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -945,7 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="617">
           <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -959,21 +841,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zlbbs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#23#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1009,14 +880,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cms/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="434" column="28" lean-forward="false" selection-start-line="434" selection-start-column="24" selection-end-line="434" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/front/front_index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
@@ -1025,27 +888,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/gentelella-master/production/calendar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/cms/css/env.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1057,35 +903,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/cms/js/env.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/cms/js/resetmail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/cms/js/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/cms/js/env.js" />
     <entry file="file://$PROJECT_DIR$/static/gentelella-master/docs/index_cn.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="360" column="50" lean-forward="false" selection-start-line="360" selection-start-column="50" selection-end-line="360" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1101,7 +923,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
           <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1109,62 +930,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="1996" column="0" lean-forward="false" selection-start-line="1996" selection-start-column="0" selection-end-line="1996" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/cms/js/env_header.js">
+    <entry file="file://$PROJECT_DIR$/static/gentelella-master/production/fixed_sidebar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-          <folding>
-            <marker date="1530773415938" expanded="true" signature="451:463" ph="..." />
-            <marker date="1530773415938" expanded="true" signature="602:632" ph="..." />
-          </folding>
+        <state relative-caret-position="56">
+          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/models.py">
+    <entry file="file://$PROJECT_DIR$/static/gentelella-master/vendors/validator/fv.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="208" column="10" lean-forward="false" selection-start-line="208" selection-start-column="10" selection-end-line="208" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#169#540#0" expanded="false" />
-            <element signature="e#911#1433#0" expanded="false" />
-            <element signature="e#1478#3724#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="303">
+          <caret line="115" column="42" lean-forward="true" selection-start-line="115" selection-start-column="42" selection-end-line="115" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cms/cms_parent_base.html">
+    <entry file="file://$PROJECT_DIR$/static/gentelella-master/production/calendar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="251" column="25" lean-forward="false" selection-start-line="251" selection-start-column="25" selection-end-line="251" selection-end-column="25" />
-          <folding>
-            <element signature="n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="56">
+          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cms/cms_base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/hooks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.html" />
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1173,56 +963,199 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
+    <entry file="file://$PROJECT_DIR$/zlbbs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="291" column="51" lean-forward="false" selection-start-line="291" selection-start-column="51" selection-end-line="291" selection-end-column="51" />
+        <state relative-caret-position="81">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/restful.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cms/cms_parent_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4903">
+          <caret line="207" column="35" lean-forward="false" selection-start-line="207" selection-start-column="35" selection-end-line="207" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/cms/js/resetmail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/cms/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="210" column="7" lean-forward="false" selection-start-line="210" selection-start-column="4" selection-end-line="210" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#911#1433#0" expanded="false" />
+            <element signature="e#1478#3724#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/cms/hooks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/gentelella-master/vendors/bootstrap/dist/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/gentelella-master/vendors/parsleyjs/bower_components/bootstrap/dist/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/cms/css/env.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/common/zlajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/common/_heads.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cms/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="183" column="61" lean-forward="true" selection-start-line="183" selection-start-column="61" selection-end-line="183" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/cms/cms_projectEnv1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="30" column="43" lean-forward="true" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
-          <folding>
-            <element signature="e#844#864#0#HTML" expanded="true" />
-            <element signature="e#1377#1398#0#HTML" expanded="true" />
-            <element signature="e#1657#1678#0#HTML" expanded="true" />
-            <element signature="e#1971#1992#0#HTML" expanded="true" />
-            <element signature="e#2250#2271#0#HTML" expanded="true" />
-            <element signature="e#2911#2931#0#HTML" expanded="true" />
-            <element signature="e#3093#3131#0#HTML" expanded="true" />
-            <element signature="e#3531#3551#0#HTML" expanded="true" />
-            <element signature="e#3732#3770#0#HTML" expanded="true" />
-            <element signature="e#3949#3987#0#HTML" expanded="true" />
-            <element signature="e#4327#4347#0#HTML" expanded="true" />
-            <element signature="e#4507#4545#0#HTML" expanded="true" />
-            <element signature="e#4703#4741#0#HTML" expanded="true" />
-            <element signature="e#5603#5627#0#HTML" expanded="true" />
-            <element signature="e#6025#6068#0#HTML" expanded="true" />
-            <element signature="e#6104#6125#0#HTML" expanded="true" />
-            <element signature="e#6186#6207#0#HTML" expanded="true" />
-            <element signature="e#6461#6482#0#HTML" expanded="true" />
-            <element signature="e#6758#6779#0#HTML" expanded="true" />
-            <element signature="e#7032#7053#0#HTML" expanded="true" />
-            <element signature="e#7690#7710#0#HTML" expanded="true" />
-            <element signature="e#7909#7947#0#HTML" expanded="true" />
-            <element signature="e#8435#8455#0#HTML" expanded="true" />
-            <element signature="e#8657#8695#0#HTML" expanded="true" />
-            <element signature="e#8895#8933#0#HTML" expanded="true" />
-            <element signature="e#9322#9342#0#HTML" expanded="true" />
-            <element signature="e#9524#9562#0#HTML" expanded="true" />
-            <element signature="e#9742#9780#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="693">
+          <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cms/cms_projectEnv_iframe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/cms/js/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="80" column="24" lean-forward="false" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cms/cms_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="211" column="43" lean-forward="false" selection-start-line="211" selection-start-column="43" selection-end-line="211" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cms/cms_base_iframe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="122" column="33" lean-forward="false" selection-start-line="122" selection-start-column="28" selection-end-line="122" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/cms/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="168">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="261" column="16" lean-forward="true" selection-start-line="261" selection-start-column="16" selection-end-line="261" selection-end-column="16" />
+          <folding>
+            <element signature="e#938#1138#0" expanded="false" />
+            <element signature="e#1234#1763#0" expanded="false" />
+            <element signature="e#1859#2574#0" expanded="false" />
+            <element signature="e#2670#3082#0" expanded="false" />
+            <element signature="e#3172#3400#0" expanded="false" />
+            <element signature="e#3477#3638#0" expanded="false" />
+            <element signature="e#3719#3765#0" expanded="false" />
+            <element signature="e#3863#5306#0" expanded="false" />
+            <element signature="e#5803#5857#0" expanded="false" />
+            <element signature="e#6181#6239#0" expanded="false" />
+            <element signature="e#6374#6426#0" expanded="false" />
+            <element signature="e#8476#9559#0" expanded="false" />
+            <element signature="e#9672#9717#0" expanded="false" />
+            <element signature="e#9834#9879#0" expanded="false" />
+            <element signature="e#9994#10039#0" expanded="false" />
+            <element signature="e#10162#10207#0" expanded="false" />
+            <element signature="e#10282#10466#0" expanded="false" />
+            <element signature="e#10559#11037#0" expanded="false" />
+            <element signature="e#11134#11861#0" expanded="false" />
+            <element signature="e#11954#12366#0" expanded="false" />
+            <element signature="e#12423#13773#0" expanded="false" />
+            <element signature="e#13831#15163#0" expanded="false" />
+            <element signature="e#15223#15655#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/cms/js/env_header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+          <folding>
+            <marker date="1530958840185" expanded="true" signature="434:446" ph="..." />
+            <marker date="1530958840185" expanded="true" signature="585:615" ph="..." />
+            <marker date="1530958840185" expanded="true" signature="1149:1161" ph="..." />
+            <marker date="1530958840185" expanded="true" signature="1377:1407" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

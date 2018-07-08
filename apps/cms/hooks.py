@@ -27,4 +27,6 @@ def before_request():
 # ⚠️  上下文钩子：这个钩子函数的目的是，只要是bp蓝图返回的模板，都会将这个添加到上下文(也就是这个变量)当中，那么所有的模板都可以使用这个变量
 @bp.context_processor
 def cms_context_processor():
-    return {"CMSPermission": CMSPersmission}
+    return {
+        "CMSPermission": CMSPersmission
+    }

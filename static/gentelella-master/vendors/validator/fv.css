@@ -112,7 +112,7 @@ form .item.items{ height:auto; }
 .mode2 .item::after{ clear:both; }
 	.mode2 .item label{  }
 		.mode2 .item label span{ float:none; display:block; line-height:inherit; }
-	.mode2 .item input:not(type="checkbox"), .item textarea{ width:250px; margin:0; }
+	.mode2 .item input:not([type="checkbox"]), .item textarea{ width:250px; margin:0; }
 	.mode2 .item textarea{ width:350px; margin:0; }
 	.mode2 .item select{ width:260px; float:none; }
 	.mode2 .item.multi label{ float:none; }

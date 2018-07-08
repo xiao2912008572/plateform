@@ -1,4 +1,4 @@
-from flask import Blueprint, views, g  # 所有模板中都可以访问g对象
+from flask import Blueprint, views, g, jsonify  # 所有模板中都可以访问g对象
 from flask import (
     render_template,
     request,
@@ -245,35 +245,58 @@ def projectApiAll():
     return render_template('cms/cms_projectAllApi.html')
 
 
-# TODO:正在做的
-# 🌟 API接口-环境管理
-@bp.route('/projectEnv/')
+# TODO:测试iframe
+@bp.route('/projectEnv_iframe/')
 @login_required
-@permission_required(CMSPersmission.COMMENTER)
-def projectEnv():
+def projectEnv_iframe():
     # 1. 拿到项目ID
     projectID = g.cms_project_id  # str类型
 
     # 2. 拿到环境ID
     envID = request.args.get('envID')
+    print('evnID = ', envID)
 
-    # 3. 查询各参数
-    envs = EoApiEnv.query.filter_by(projectID=int(projectID)).all()
-    env = EoApiEnv.query.filter_by(envID=envID).first()
-    env_uri = EoApiEnvFrontUri.query.filter_by(envID=envID).first()
-    env_headers = EoApiEnvHeader.query.filter_by(envID=envID).all()
-    env_addtionalparams = EoApiEnvAdditionalParam.query.filter_by(envID=envID).all()
-    env_params = EoApiEnvParam.query.filter_by(envID=envID).all()
+    # 如果没有拿到环境ID，默认显示第一个
+    if envID == None:
+        # # 3. 查询各参数
+        envs = EoApiEnv.query.filter_by(projectID=int(projectID)).all()
+        print(envs[0].envName)
+        env = EoApiEnv.query.filter_by(envID=envID).first()
+        env_uri = EoApiEnvFrontUri.query.filter_by(envID=envID).first()
+        env_headers = EoApiEnvHeader.query.filter_by(envID=envID).all()
+        env_addtionalparams = EoApiEnvAdditionalParam.query.filter_by(envID=envID).all()
+        env_params = EoApiEnvParam.query.filter_by(envID=envID).all()
 
-    return render_template(
-        'cms/cms_projectEnv1.html',
-        envs=envs,
-        env=env,
-        env_uri=env_uri,
-        env_headers=env_headers,
-        env_addtionalparams=env_addtionalparams,
-        env_params=env_params
-    )
+        return render_template(
+            'cms/cms_projectEnv_iframe.html',
+            envs=envs,
+            env=env,
+            env_uri=env_uri,
+            env_headers=env_headers,
+            env_addtionalparams=env_addtionalparams,
+            env_params=env_params
+        )
+    else:
+        envID = request.args.get('envID')
+
+        # 3. 查询各参数
+        envs = EoApiEnv.query.filter_by(projectID=int(projectID)).all()
+        env = EoApiEnv.query.filter_by(envID=envID).first()
+        env_uri = EoApiEnvFrontUri.query.filter_by(envID=envID).first()
+        env_headers = EoApiEnvHeader.query.filter_by(envID=envID).all()
+        env_addtionalparams = EoApiEnvAdditionalParam.query.filter_by(envID=envID).all()
+        env_params = EoApiEnvParam.query.filter_by(envID=envID).all()
+
+        return jsonify(
+            {
+                # 'envs': envs,
+                'envName': env.envName,
+                'envDesc': env.envDesc,
+                'envUri': env_uri.uri,
+                # 'env_headers': env_headers,
+                # 'env_addtionalparams': env_addtionalparams,
+                # 'env_params': env_params
+            })
 
 
 # 🌟 API接口-新增环境

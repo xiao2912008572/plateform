@@ -276,7 +276,6 @@
                             {# 将数据绑定到tr标签上面，有利于做'编辑'功能的时候取值 #}
                             <tr data-projectName="{{ project.projectName }}" data-projectType="{{ project.projectType }}" data-projectVersion="{{ project.projectVersion }}"
                                 data-projectID="{{ project.projectID }}" data-updatetime="{{ project.projectUpdateTime }}" data-createtime="{{ project.projectCreateTime }}">
-
                                 <td>
                                     <a href="{{ url_for('cms.project_index',projectID=project.projectID) }}">{{ project.projectName }}</a>
                                 </td>
@@ -284,13 +283,6 @@
                                 <td>{{ project.projectType }}</td>
                                 <td>{{ project.projectCreateTime }}</td>
                                 <td>{{ project.projectUpdateTime }}</td>
-
-                                {#                                <td>#}
-                                {#                                    <a href="{{ project.image_url }}" target="_blank">{{ project.image_url }}</a>#}
-                                {#                                </td>#}
-                                {#                                <td>#}
-                                {#                                    <a href="{{ project.link_url }}" target="_blank">{{ project.link_url }}</a>#}
-                                {#                                </td>#}
                                 <td>
                                     <button class="btn btn-default btn-xs edit-project-btn">编辑</button>
                                     <button class="btn btn-danger btn-xs delete-project-btn">删除</button>

@@ -88,7 +88,7 @@
 
                 <br/>
 
-                <!-- sidebar menu -->
+                <!-- sidebar menu 导航栏菜单 -->
                 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                     <div class="menu_section">
                         <h3>基础业务</h3>
@@ -100,20 +100,20 @@
                             </li>
 
                             <li>
-                                <a href="{{ url_for("cms.projectOverview") }}"><i class="fa fa-area-chart"></i> 项目概况 <span class="fa"></span></a>
+                                <a href1="{{ url_for("cms.projectOverview") }}"><i class="fa fa-area-chart"></i> 项目概况 <span class="fa"></span></a>
                             </li>
 
                             <li>
                                 <a><i class="fa fa-edit"></i> API接口 <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li>
-                                        <a href="{{ url_for('cms.projectApiQuickTest') }}"><i class="fa fa-bolt"></i>快速测试</a>
+                                        <a href1="{{ url_for('cms.projectApiQuickTest') }}"><i class="fa fa-bolt"></i>快速测试</a>
                                     </li>
                                     <li>
-                                        <a href="{{ url_for('cms.projectApiAll') }}"><i class="fa fa-bars"></i>所有接口</a>
+                                        <a href1="{{ url_for('cms.projectApiAll') }}"><i class="fa fa-bars"></i>所有接口</a>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="fa fa-trash-o"></i>接口回收站</a>
+                                        <a href1="#"><i class="fa fa-trash-o"></i>接口回收站</a>
                                     </li>
                                 </ul>
                             </li>
@@ -123,36 +123,37 @@
                                 <a><i class="fa fa-bug"></i> 自动化测试 <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li>
-                                        <a href="#"><i class="fa fa-cog"></i>用例管理</a>
+                                        <a href1="#"><i class="fa fa-cog"></i>用例管理</a>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="fa fa-clock-o"></i>定时测试任务</a>
+                                        <a href1="#"><i class="fa fa-clock-o"></i>定时测试任务</a>
                                     </li>
                                 </ul>
                             </li>
 
                             {% if cms_user.has_permission(CMSPermission.POSTER) %}
-                                <li><a href="#"><i class="fa fa-file-code-o"></i> 状态码 <span class="fa"></span></a>
+                                <li><a href1="#"><i class="fa fa-file-code-o"></i> 状态码 <span class="fa"></span></a>
                                 </li>
                             {% endif %}
 
                             {% if cms_user.has_permission(CMSPermission.COMMENTER) %}
-                                <li><a href="#"><i class="fa fa-file-o"></i> 项目文档 <span class="fa"></span></a>
+                                <li><a href1="#"><i class="fa fa-file-o"></i> 项目文档 <span class="fa"></span></a>
                                 </li>
                             {% endif %}
 
                             {% if cms_user.has_permission(CMSPermission.BOARDER) %}
-                                <li><a href="{{ url_for('cms.projectEnv') }}"><i class="fa fa-globe"></i> 环境管理 <span class="fa"></span></a>
+                                {#                                <li><a href="{{ url_for('cms.projectEnv') }}" id="base_env_manage"><i class="fa fa-globe"></i> 环境管理 <span class="fa"></span></a></li>#}
+                                <li><a href="javascript:void(0)" id="base_env_manage" data-href="{{ url_for('cms.projectEnv_iframe') }}"><i class="fa fa-globe"></i> 环境管理 <span
+                                        class="fa"></span></a></li>
+                            {% endif %}
+
+                            {% if cms_user.has_permission(CMSPermission.FRONTUSER) %}
+                                <li><a href1="#"><i class="fa fa-user"></i> 协作管理 <span class="fa"></span></a>
                                 </li>
                             {% endif %}
 
                             {% if cms_user.has_permission(CMSPermission.FRONTUSER) %}
-                                <li><a href="#"><i class="fa fa-user"></i> 协作管理 <span class="fa"></span></a>
-                                </li>
-                            {% endif %}
-
-                            {% if cms_user.has_permission(CMSPermission.FRONTUSER) %}
-                                <li><a href="#"><i class="fa fa-hacker-news"></i> 项目动态 <span class="fa"></span></a>
+                                <li><a href1="#"><i class="fa fa-hacker-news"></i> 项目动态 <span class="fa"></span></a>
                                 </li>
                             {% endif %}
 
@@ -163,12 +164,12 @@
                         <ul class="nav side-menu" style="height:100%">
 
                             {% if cms_user.has_permission(CMSPermission.CMSUSER) %}
-                                <li><a href="#"><i class="fa fa-file-word-o"></i> 日志管理 <span class="fa"></span></a>
+                                <li><a href1="#"><i class="fa fa-file-word-o"></i> 日志管理 <span class="fa"></span></a>
                                 </li>
                             {% endif %}
 
                             {% if cms_user.is_developer %}
-                                <li><a href="#"><i class="fa fa-circle-o-notch"></i> 持续集成 <span class="fa"></span></a>
+                                <li><a href1="#"><i class="fa fa-circle-o-notch"></i> 持续集成 <span class="fa"></span></a>
                                 </li>
                             {% endif %}
 
@@ -177,7 +178,7 @@
                 </div>
                 <!-- /sidebar menu -->
 
-                <!-- /menu footer buttons -->
+                <!-- /menu footer buttons 底部菜单-->
                 <div class="sidebar-footer hidden-small">
                     <a data-toggle="tooltip" data-placement="top" title="Settings">
                         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
@@ -293,42 +294,12 @@
         </div>
         <!-- /top navigation -->
 
-        <!-- page content -->
+        <!-- page content 内容页面-->
+        {#  TODO 开始 替换中...  #}
         <div class="right_col" role="main">
-            <!-- top tiles :顶部栏 -->
-            <div class="row tile_count">
-                <h1>{% block page_title %}{% endblock %}
-                </h1>
-            </div>
-            <!-- /top tiles -->
-
-            {# 第二行 #}
-            <div class="row">
-                <div class="main_content">
-                    {% block main_content_2 %}{% endblock %}
-                </div>
-            </div>
-            <br/>
-
-            {# 第三行 #}
-            <div class="row">
-                <div class="main_content">
-                    {% block main_content_3 %}{% endblock %}
-                </div>
-            </div>
-
-            {# 第四行 #}
-            <div class="row">
-                <div class="main_content">
-                    {% block main_content_4 %}{% endblock %}
-                </div>
-            </div>
-
-            {% block body1 %}
-
-            {% endblock %}
-            <!-- end of weather widget -->
+            <iframe id="base_iframe_chagne" src="http://www.baidu.com" frameborder="0" style="width:1150px ;height: 1450px "></iframe>
         </div>
+        {#  TODO 结尾 替换中... #}
     </div>
 </div>
 

@@ -183,6 +183,9 @@ class EoApiEnv(db.Model):
     # 一对多关系映射
     project = db.relationship("EoProject", backref='apienv')
 
+    def __repr__(self):
+        return "<Article(envName:%s)>" % self.envName
+
 
 # CREATE TABLE `eo_api_env_front_uri` (
 #   `envID` int(10) unsigned NOT NULL,

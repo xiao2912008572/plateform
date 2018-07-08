@@ -64,8 +64,26 @@ $(function () {
     } else if (url.indexOf('comments') >= 0) {
         var commentsManageLi = $('.comments-manage');
         commentsManageLi.addClass('unfold').siblings().removeClass('unfold');
-    }else if(url.indexOf('banners')>=0){
+    } else if (url.indexOf('banners') >= 0) {
         var bannerManagerLi = $(".banner-manage");
         bannerManagerLi.addClass('unfold').siblings().removeClass('unfold');
     }
+});
+
+// 项目首页重写环境管理 - a标签
+$(function () {
+    // 绑定最外层div上面
+    // 事件委托
+    // 让box1 处理来自 子元素P的click事件委托
+    $("#sidebar-menu").delegate("a", "click", function (event) {
+
+        // 如果a标签中href1存在
+        if (event.target.dataset.href) {
+            // alert(event.target.dataset.href);
+
+            // 替换iframe中的src属性的值
+            $("#base_iframe_chagne").attr('src', event.target.dataset.href)
+        }
+    });
+
 });
