@@ -2,30 +2,133 @@
 {% from "common/_macros.html" import static %}
 {% from "common/_macros.html" import gm %}
 
+{% block header %}
+    <style>
+        .top-title {
+            color: #73879C;
+        }
 
-<script>
-    $(function () {
-        $('p.p').click(function (event) {
-            event.preventDefault();
-            {#console.log($(event));#}
-            var envID = event.target.dataset['envid'];
+        .sm-content {
+            padding-left: 20px;
+        }
 
-            zlajax.get({
-                'url': '/cms/projectEnv_iframe/',
-                'data': {
-                    'envID': envID
-                },
-                'success': function (data) {
-                    console.log(data);
-                    $('#env_name1').val(data['envName']);
-                    $('#env_desc1').val(data['envDesc']);
-                    $('#env_uri1').val(data['envUri']);
-                }
-            });
+        .lg-content {
+            padding-top: 8px;
+            padding-left: 30px;
+        }
 
+        .form-content {
+            width: 800px;
+        }
+
+        .lg-form-group {
+            width: 200px;
+        }
+    </style>
+
+    <script>
+        {#  点击环境名称列表查看详情  #}
+        $(function () {
+            $('p.p').click(function (event) {
+                // 阻止默认事件
+                event.preventDefault();
+
+                // 获取envID
+                var envID = event.target.dataset['envid'];
+
+                // 请求envID，并且赋值
+                zlajax.get({
+                    'url': '/cms/projectEnv_iframe/',
+                    'data': {
+                        'envID': envID
+                    },
+                    'success': function (data) {
+                        $('#env_name1').val(data['envName']);
+                        $('#env_desc1').val(data['envDesc']);
+                        $('#env_uri1').val(data['envUri']);
+
+                        // 1. header信息
+                        var count = 0;
+                        for (var i = 0; i < data['env_headers'].length; i++) {
+                            count++;
+                            // 新增输入框
+                            $('#lg_header_from').append('<input type="text" class="form-control" id="lg_env_header_key' + count + '" placeholder="env_header.headerName"\n' +
+                                '                                           style="width: 200px">\n' +
+                                '                                    <input type="text" class="form-control" id="lg_env_header_value' + count + '" placeholder="env_header.headerValue"\n' +
+                                '                                           style="width: 200px;margin-left: 10px">\n' +
+                                '                                    <p></p>');
+
+                            // 填充header
+                            var key_headerName = data['env_headers'][i]['headerName'];
+                            var value_headerValue = data['env_headers'][i]['headerValue'];
+                            a = '#lg_env_header_key' + count;
+                            b = '#lg_env_header_value' + count;
+                            $(a).val(key_headerName);
+                            $(b).val(value_headerValue);
+                        }
+
+                        // 2. 额外参数信息
+                        for (var j = 0; j < data['env_aparams'].length; j++) {
+                            count++;
+                            // 2. 新增输入框
+                            $('#lg_aparams_from').append('<input type="text" class="form-control" id="lg_env_aparams_key' + count + '" placeholder="额外参数名"\n' +
+                                '                                           style="width: 200px">\n' +
+                                '                                    <input type="text" class="form-control" id="lg_env_aparams_value' + count + '" placeholder="额外参数值"\n' +
+                                '                                           style="width: 200px;margin-left: 10px">\n' +
+                                '                                    <input type="text" class="form-control" id="lg_env_aparams_desc' + count + '" placeholder="额外参数描述"\n' +
+                                '                                           style="width: 200px;margin-left: 10px">\n' +
+                                '                                    <p></p>');
+
+                            // 4. 填充额外参数
+                            var key_aparamsName = data['env_aparams'][j]['aparamsKey'];
+                            var value_aparamsValue = data['env_aparams'][j]['aparamsValue'];
+                            var value_aparamsDesc = data['env_aparams'][j]['aparamsDesc'];
+                            a = '#lg_env_aparams_key' + count;
+                            b = '#lg_env_aparams_value' + count;
+                            c = '#lg_env_aparams_desc' + count;
+                            $(a).val(key_aparamsName);
+                            $(b).val(value_aparamsValue);
+                            $(c).val(value_aparamsDesc);
+                        }
+
+                        // 3. 全局参数信息
+                        for (var k = 0; k < data['env_aparams'].length; k++) {
+                            count++;
+                            console.log('--------------------');
+                            // 2. 新增输入框
+                            $('#lg_params_from').append('<input type="text" class="form-control" id="lg_env_params_key' + count + '" placeholder="额外参数名"\n' +
+                                '                                           style="width: 200px">\n' +
+                                '                                    <input type="text" class="form-control" id="lg_env_params_value' + count + '" placeholder="额外参数值"\n' +
+                                '                                           style="width: 200px;margin-left: 10px">\n' +
+                                '                                    <input type="text" class="form-control" id="lg_env_params_desc' + count + '" placeholder="额外参数描述"\n' +
+                                '                                           style="width: 200px;margin-left: 10px">\n' +
+                                '                                    <p></p>');
+
+                            // 4. 填充额外参数
+                            var key_paramsName = data['env_params'][k]['paramsKey'];
+                            var value_paramsValue = data['env_params'][k]['paramsValue'];
+                            var value_paramsDesc = data['env_params'][k]['paramsDesc'];
+                            console.log('key_paramsName = ' + key_paramsName);
+                            console.log('value_paramsValue = ' + value_paramsValue);
+                            console.log("value_paramsDesc = " + value_paramsDesc);
+                            a = '#lg_env_params_key' + count;
+                            b = '#lg_env_params_value' + count;
+                            c = '#lg_env_params_desc' + count;
+                            $(a).val(key_paramsName);
+                            $(b).val(value_paramsValue);
+                            $(c).val(value_paramsDesc);
+                        }
+
+                    }
+                });
+
+                // 解绑点击事件
+                $('p.p').unbind();
+            })
         })
-    })
-</script>
+    </script>
+{% endblock %}
+
 
 <div>
     {# TODO iframe top start:顶部栏替换 #}
@@ -35,14 +138,14 @@
         <div class="row tile_count">
             <h1>
                 {% block page_title %}
-                    <p style="margin-left: 30px">环境管理</p>
+                    <p class='top-title'>环境管理</p>
                 {% endblock %}
             </h1>
         </div>
         <!-- /top tiles -->
         {# TODO iframe top end:顶部栏替换 #}
 
-        {#            第二行#}
+        {# 第二行 #}
         <div class="row">
             {# TODO div 从这里开始 #}
             <div class="main_content" id="main_content_2">
@@ -135,7 +238,8 @@
                     </div>
 
                     {#  内容  #}
-                    <div class="sm-content col-md-2">
+                    {# 小版心 #}
+                    <div class="sm-content col-md-4">
                         <table class="table table-hover">
                             <thead>
                             <tr>
@@ -160,27 +264,27 @@
                     </div>
 
                     {#    大版心     #}
-                    <div class="lg-content col-md-10" style="padding-top: 8px;padding-left: 18px">
-                        <div class="form-content" style="width: 800px;">
+                    <div class="lg-content col-md-8">
+                        <div class="form-content">
                             <form>
-                                <div class="form-group" style="width: 200px;">
+                                <div class="form-group lg-form-group">
                                     <label for="env_name">环境名称</label>
                                     <input type="text" class="form-control" value="{{ env.envName }}" id="env_name1" placeholder="{{ env.envName }}">
                                 </div>
 
-                                <div class="form-group" style="width: 200px;">
+                                <div class="form-group lg-form-group">
                                     <label for="env_desc">环境说明</label>
                                     <input type="text" class="form-control" value="{{ env.envDesc }}" id="env_desc1" placeholder="{{ env.envDesc }}">
                                 </div>
 
                                 <hr>
 
-                                <div class="form-group" style="width: 200px;">
+                                <div class="form-group lg-form-group">
                                     <label for="env_uri">前置URI</label>
                                     <input type="text" value="{{ env_uri.uri }}" class="form-control" id="env_uri1" placeholder="{{ env_uri.uri }}">
                                 </div>
 
-                                <div class="form-group" style="width: 200px;">
+                                <div class="form-group lg-form-group">
                                     <label for="env_uri">鉴权信息</label>
                                     <select id='env_uri' class="form-control">
                                         <option>无</option>
@@ -188,45 +292,16 @@
                                     </select>
                                 </div>
 
-                                <label for="env_header">请求Header头部</label>
-                                <div class="form-inline form-group" id="header_from">
-                                    {% for env_header in env_headers %}
-                                        <input type="text" class="form-control" value='{{ env_header.headerName }}' id="env_header_key" placeholder="{{ env_header.headerName }}"
-                                               style="width: 200px">
-                                        <input type="text" class="form-control" value="{{ env_header.headerValue }}" id="env_header_value"
-                                               placeholder="{{ env_header.headerValue }}"
-                                               style="width: 200px;margin-left: 10px">
-                                        <p></p>
-                                    {% endfor %}
+                                <label for="env_header">请求Header头部123</label>
+                                <div class="form-inline lg_form-group" id="lg_header_from">
                                 </div>
 
                                 <label for="env_header">额外参数</label>
-                                <div class="form-inline form-group" id="header_from">
-                                    {% for env_addtionalparam in env_addtionalparams %}
-                                        <input type="text" class="form-control" id="env_additionnalparam_key" value="{{ env_addtionalparam.paramKey }}"
-                                               placeholder="env.additionnalparam"
-                                               style="width: 200px">
-                                        <input type="text" class="form-control" id="env_additionnalparam_value" value="{{ env_addtionalparam.paramValue }}"
-                                               placeholder="env.env_header"
-                                               style="width: 200px;margin-left: 10px">
-                                        <input type="text" class="form-control" id="env_additionnalparam_desc" value="{{ env_addtionalparam.paramDesc }}"
-                                               placeholder="env.env_header"
-                                               style="width: 200px;margin-left: 10px">
-                                    {% endfor %}
-
-
+                                <div class="form-inline lg_form-group" id="lg_aparams_from">
                                 </div>
 
                                 <label for="env_header">全局变量</label>
-                                <div class="form-inline form-group" id="header_from">
-                                    {% for env_param in env_params %}
-                                        <input type="text" class="form-control" id="env_param_key" value="{{ env_param.paramKey }}" placeholder="env.additionnalparam"
-                                               style="width: 200px">
-                                        <input type="text" class="form-control" id="env_param_value" value="{{ env_param.paramValue }}" placeholder="env.env_header"
-                                               style="width: 200px;margin-left: 10px">
-                                        <input type="text" class="form-control" id="env_param_desc" value="{{ env_param.paramDesc }}" placeholder="env.env_header"
-                                               style="width: 200px;margin-left: 10px">
-                                    {% endfor %}
+                                <div class="form-inline form-group" id="lg_params_from">
                                 </div>
 
                                 <button type="submit" class="btn btn-primary">Submit</button>

@@ -115,29 +115,9 @@
     <link href="{{ gm('vendors/jqvmap/dist/jqvmap.min.css') }}" rel="stylesheet">
     <link href="{{ gm('vendors/bootstrap-daterangepicker/daterangepicker.css') }}" rel="stylesheet">
 
-    <script>
-        $(function () {
-            $('p.p').click(function (event) {
-                event.preventDefault();
-                {#console.log($(event));#}
-                var envID = event.target.dataset['envid'];
+    {% block header %}
 
-                zlajax.get({
-                    'url': '/cms/projectEnv_iframe/',
-                    'data': {
-                        'envID': envID
-                    },
-                    'success': function (data) {
-                        console.log(data);
-                        $('#env_name1').val(data['envName']);
-                        $('#env_desc1').val(data['envDesc']);
-                        $('#env_uri1').val(data['envUri']);
-                    }
-                });
-
-            })
-        })
-    </script>
+    {% endblock %}
 
     <style type="text/css">
         body {
@@ -154,7 +134,7 @@
 
     <!-- top tiles :顶部栏 -->
     <div class="row tile_count">
-        <h1>
+        <h1 style="margin-left: 30px">
             {% block page_title %}
             {% endblock %}
         </h1>
@@ -184,4 +164,5 @@
         </div>
     </div>
     <br/>
+</div>
 </body>

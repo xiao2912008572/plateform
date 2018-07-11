@@ -1,7 +1,7 @@
 $(function () {
     var count = 0;
     var header = $("#env_header_key" + count);
-    console.log(header);
+    // console.log(header);
 
     // 绑定点击事件
     header.click(function (event) {
@@ -32,12 +32,12 @@ $(function () {
     })
 });
 
-// 🌟 点击阻止envName a标签默认事件
+// 🌟 点击阻止envName a标签默认事件，显示相关内容
 $(function () {
     $('#envName').click(function (event) {
         event.preventDefault();
         var envID = $('#envName').attr('data-envID');
-        console.log(envID);
+        // console.log(envID);
 
         zlajax.get({
             'url': '/cms/projectEnv_iframe/',
@@ -48,6 +48,11 @@ $(function () {
                 $('#env_name1').val(data['envName']);
                 $('#env_desc1').val(data['envDesc']);
                 $('#env_uri1').val(data['envUri']);
+
+                // //1. 遍历env_headers
+                // for (var i = 0; i < data['env_headers'].length; i++) {
+                //     console.log(data['env_headers'][i]);
+                // }
             }
         });
     })

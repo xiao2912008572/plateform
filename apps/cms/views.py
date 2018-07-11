@@ -254,17 +254,23 @@ def projectEnv_iframe():
 
     # 2. 拿到环境ID
     envID = request.args.get('envID')
-    print('evnID = ', envID)
+    # print('evnID = ', envID)
 
     # 如果没有拿到环境ID，默认显示第一个
     if envID == None:
-        # # 3. 查询各参数
+        # 3. 查询各参数
+        # 3.1 查询当前项目下所有的环境
         envs = EoApiEnv.query.filter_by(projectID=int(projectID)).all()
         print(envs[0].envName)
+        # 查询某个环境ID的详情信息
         env = EoApiEnv.query.filter_by(envID=envID).first()
+        # 查询当前envid中的URI
         env_uri = EoApiEnvFrontUri.query.filter_by(envID=envID).first()
+        # 查询当前envid中的headers
         env_headers = EoApiEnvHeader.query.filter_by(envID=envID).all()
+        # 查询额外参数
         env_addtionalparams = EoApiEnvAdditionalParam.query.filter_by(envID=envID).all()
+        # 查询全局参数
         env_params = EoApiEnvParam.query.filter_by(envID=envID).all()
 
         return render_template(
@@ -277,26 +283,61 @@ def projectEnv_iframe():
             env_params=env_params
         )
     else:
+        # 拿到envID
         envID = request.args.get('envID')
 
         # 3. 查询各参数
-        envs = EoApiEnv.query.filter_by(projectID=int(projectID)).all()
-        env = EoApiEnv.query.filter_by(envID=envID).first()
-        env_uri = EoApiEnvFrontUri.query.filter_by(envID=envID).first()
-        env_headers = EoApiEnvHeader.query.filter_by(envID=envID).all()
-        env_addtionalparams = EoApiEnvAdditionalParam.query.filter_by(envID=envID).all()
-        env_params = EoApiEnvParam.query.filter_by(envID=envID).all()
+        envs = EoApiEnv.query.filter_by(projectID=int(projectID)).all()  # 查询当前项目中的所有环境
+        env = EoApiEnv.query.filter_by(envID=envID).first()  # 查询指定环境ID下的环境信息
+        env_uri = EoApiEnvFrontUri.query.filter_by(envID=envID).first()  # 查询指定环境ID下的环境uri
 
-        return jsonify(
-            {
-                # 'envs': envs,
-                'envName': env.envName,
-                'envDesc': env.envDesc,
-                'envUri': env_uri.uri,
-                # 'env_headers': env_headers,
-                # 'env_addtionalparams': env_addtionalparams,
-                # 'env_params': env_params
-            })
+        # 3.1 声明headers列表
+        env_headers = EoApiEnvHeader.query.filter_by(envID=envID).all()  # 查询指定环境ID下的头部信息,返回列表
+        headers = []
+        for i in env_headers:
+            # print(i)
+            # print('headerName = ', i.headerName)
+            # print('headerValue = ', i.headerValue)
+
+            header_dict = {
+                'headerName': i.headerName,  # 请求头的Name
+                'headerValue': i.headerValue  # 请求头的Value
+            }
+            headers.append(header_dict)
+
+        # 3.2 声明aparams
+        env_addtionalparams = EoApiEnvAdditionalParam.query.filter_by(envID=envID).all()
+        aparams = []
+        for i in env_addtionalparams:
+            aparams_dict = {
+                'aparamsKey': i.paramKey,
+                'aparamsValue': i.paramValue,
+                'aparamsDesc': i.paramDesc
+            }
+            aparams.append(aparams_dict)
+
+        # 3.3 声明params
+        env_params = EoApiEnvParam.query.filter_by(envID=envID).all()
+        params = []
+        for i in env_params:
+            params_dict = {
+                'paramsKey': i.paramKey,
+                'paramsValue': i.paramValue,
+                'paramsDesc': i.paramDesc
+            }
+            params.append(params_dict)
+
+    return jsonify(
+        {
+            # 'envs': envs,
+            'envName': env.envName,
+            'envDesc': env.envDesc,
+            'envUri': env_uri.uri,
+            'env_headers': headers,
+            'env_aparams': aparams,
+            'env_params': params
+        }
+    )
 
 
 # 🌟 API接口-新增环境
